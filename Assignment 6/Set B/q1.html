@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback form</title>
+    <style>
+        label{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Feedback Form</h1>
+        <form action="#" method="post">
+            <label for="name">Student Name</label>
+            <input id="name" name="name" type="text">
+            <br><br>
+            <label for="email">Student E-mail</label>
+            <input id="email" name="email" type="email">
+            <br><br>
+            <label for="inst">How do you know this Institude</label>
+            <select name="inst" id="inst">
+                <option value="management">Through College Management</option>
+                <option value="social">Through Social Media</option>
+                <option value="ad">Through Advertisment</option>
+            </select>
+            <br><br>
+            <label for="rate">How do you rate the faculty</label>
+            <input id="rate" name="rate" value="poor" type="radio">Poor 
+            <input id="rate" name="rate" value="good" type="radio">Good 
+            <input id="rate" name="rate" value="vgood" type="radio">Very Good  
+            <input id="rate" name="rate" value="excellent" type="radio">Excellent
+            <br><br>
+            <label for="suggestion">Suggestions For the betterment of faculty and institude</label><br>
+            <textarea name="suggestion" id="suggestion" cols="40" rows="7"></textarea>
+            <br><br><br>
+            <button type="submit">Send</button> <button type="reset">Clear</button>
+        </form>
+    </center>
+</body>
+</html>
