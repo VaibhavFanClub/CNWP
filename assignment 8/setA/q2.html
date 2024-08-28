@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>perfect</title>
+    <script>
+        let num = Number(prompt("Enter a number"));
+        let sum = 0;
+        for(let i = 1; i<num; i++){
+            if(num%i==0){
+                sum += i;
+            }
+        }
+        if(sum == num){
+            document.write(`Is perfect`)
+        }else{
+            document.write('Is not perfect');
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
