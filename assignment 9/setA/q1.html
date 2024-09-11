@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let name = prompt("Enter name");
+        let time = new Date().getHours();
+        if (time > 0 && time < 12) {
+            alert(`Good morning ${name}`);
+        } else if (time >= 12 && time <= 16) {
+            alert(`Good afternoon ${name}`);
+        }else{
+            alert(`Good evening ${name}`);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

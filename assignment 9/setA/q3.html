@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let flag = 1;
+        while (flag) {
+            let arr = "10, 54, 41, 23, 87, 18, 21";
+            let tarr = [10, 54, 41, 23, 87, 18, 21];
+            let choice = Number(prompt(`
+                !!! MENU !!!
+                1) Display an array.
+                2) Sort elements of an array.
+                3) Reverse elements of an array. 
+                4) Search a given element from an array.
+                5) Exit.
+            `));
+            switch (choice) {
+                case 1:
+                    alert("Array " + arr);
+                    break;
+                case 2:
+                    let sarr = tarr.sort();
+                    alert(`
+                        Original Array: ${arr}
+                        Sorted Array: ${sarr}
+                    `);
+                    break;
+                case 3:
+                    let rarr = tarr.reverse();
+                    alert(`
+                        Original Array: ${arr}
+                        Reverse Array: ${rarr}
+                    `);
+                    break;
+                case 4:
+                    let num = Number(prompt("Number to be searched"));
+                    let ind = tarr.indexOf(num);
+                    console.log(ind);
+                    alert(`
+                        Original Array: ${arr}
+                        Element is at position: ${(ind + 1)}
+                    `);
+                    break;
+                case 5:
+                    flag = 0;
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
