@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let [day, month, year] = prompt("Enter birthdate in dd-mm-yyyy format").split("-");
+        let date = new Date();
+        let [currday, currmonth, curryear] = [date.getDate(), date.getMonth()+1, date.getFullYear()];
+        let years = curryear - year;
+        let months = currmonth - month;
+        let days = currday - day;
+
+        if (days < 0) {
+            months--;
+            days += new Date(curryear, currmonth - 1, 0).getDate();
+        }
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        let calage = `${years} years ${months} months and ${days} days`;
+        document.write("Your age is " + calage);
+    </script>
+</head>
+<body>
+</body>
+</html>
