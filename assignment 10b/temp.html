@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>second page</h1>
+    <div id="menu"></div>
+        <a href="temp.html">next page</a>
+        <h2>Choose an option:</h2>
+        <button onclick="goBack()">a. Previous page</button><br><br>
+        <button onclick="goForward()">b. Next page</button><br><br>
+        <button onclick="goBackTwo()">c. Two pages back</button><br><br>
+        <button onclick="goForwardTwo()">d. Two pages forward</button><br><br>
+    </div>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+        
+        function goForward() {
+            history.forward();
+        }
+        
+        function goBackTwo() {
+            history.go(-2);
+        }
+        
+        function goForwardTwo() {
+            history.go(2);
+        }
+    </script>
+
+    <h3>Current page history:</h3>
+    <button onclick="alert('History length: ' + history.length)">
+        Check History Length
+    </button>
+</body>
+</html>

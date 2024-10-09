@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validation Form</title>
+</head>
+<body>
+    <form name="frm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="mobile">Mobile:</label>
+        <input type="text" id="mobile" name="mobile"><br><br>
+        <button onclick="validate()">Validate</button>
+    </form>
+    <script>
+        function isValidName(name) {
+            let namePattern = /^[A-Za-z\s]+$/;
+            return namePattern.test(name);
+        }
+
+        function isValidMobile(mobile) {
+            let mobilePattern = /^[0-9]{10}$/;
+            return mobilePattern.test(mobile);
+        }
+        function validate(){
+            let name = frm.name.value;
+            let mobile = frm.mobile.value;
+            if (name === "" || mobile === "") {
+                alert("All fields must be filled.");
+            } else if (!isValidName(name)) {
+                alert("Name should contain only alphabets.");
+            } else if (!isValidMobile(mobile)) {
+                alert("Mobile number must be 10 digits long.");
+            } else {
+                if(isValidName(name)){
+                    alert("Name is valid");
+                }
+                if(isValidMobile(mobile)){
+                    alert("Mobile number is valid");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
